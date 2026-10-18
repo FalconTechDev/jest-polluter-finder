@@ -1,0 +1,24 @@
+{
+  "name": "jest-polluter-finder",
+  "version": "0.1.0",
+  "description": "Find the minimal set of Jest test files that make a victim test fail (test pollution), via delta debugging.",
+  "type": "module",
+  "bin": {
+    "jest-polluter": "bin/cli.js"
+  },
+  "files": [
+    "bin",
+    "src"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "demo": "node bin/cli.js --victim demo/tests/victim.test.js --cwd demo"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
